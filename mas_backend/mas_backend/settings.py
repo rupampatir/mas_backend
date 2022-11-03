@@ -136,6 +136,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://rupampatir.com",
-    "http://mas-frontend.s3-website-us-east-1.amazonaws.com/",
+    "http://mas-frontend.s3-website-us-east-1.amazonaws.com",
     "http://rupampatir.com",
 ]
