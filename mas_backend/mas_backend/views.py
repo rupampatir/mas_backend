@@ -58,9 +58,11 @@ def chooseAction_QTable(current_board, start_player):
 
 # our result page view
 def get_tic_tac_toe_action(request):
+    print(request)
     observation = request.GET.get('board')
     start_player = request.GET.get('start_player')
     observation = observation[1:-1]
     parsed = [-1 if ob=='2' else int(ob) for ob in observation]
     optimalAction = chooseAction_QTable(np.array(parsed).reshape((3,3)), start_player)
+    print(optimalAction)
     return JsonResponse({"action":optimalAction}, safe=False)
